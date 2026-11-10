@@ -1,0 +1,122 @@
+
+/* Configuracion general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Diseño del fondo de la pagina */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de la calculadora */
+.calculadora {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    width: 330px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.164);
+}
+
+/* Titulo */
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Pantalla de resultados */
+#pantalla {
+    width: 100%;
+    height: 65px;
+    background: #0f172a;
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 28px;
+    text-align: right;
+
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Distribucion de los botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Diseño general de los botones */
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    background: #188d8d;
+    color: white;
+
+    transition: 0.2s;
+}
+
+/* Efecto al pasar el mouse */
+button:hover {
+    background: #dcd5eb;
+    transform: scale(1.05);
+}
+
+/* Botones de operaciones */
+.operador {
+    background: #7d8570;
+}
+
+.operador:hover {
+    background: #b5bccf;
+}
+
+/* Botones de borrar */
+.especial {
+    background: #dc2626;
+}
+
+.especial:hover {
+    background: #a3c4f5;
+}
+
+/* Boton de resultado */
+.igual {
+    background: #16a34a;
+    grid-row: span 2;
+    height: auto;
+}
+
+.igual:hover {
+    background: #0dc550;
+}
+
+/* Boton cero */
+.cero {
+    grid-column: span 2;
+}
+
+/* Adaptacion para celulares */
+@media (max-width: 400px) {
+    .calculadora {
+        width: 90%;
+    }
+}
